@@ -1,0 +1,97 @@
+/* L:444654  D:343541 */
+.dark .main-container {
+    background-color: #424758;
+}
+
+.dark .chat-container {
+    color: #fff;
+}
+
+.dark .user-container {
+    background-color: #424758;
+}
+
+.dark .bot-container {
+    background-color: #555969;
+    border: 2px solid transparent;
+}
+
+/* .dark .form-container {
+    background-color: #424758;
+} */
+
+.dark .sticky::after {
+    background: linear-gradient(to top, #424758, #424758, transparent);
+}
+
+.dark .form-group {
+    box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.2);
+}
+
+.dark .chat-textarea:disabled,
+.dark .chat-textarea,
+.dark .form-group {
+    color: #e1e1e3;
+    background-color: #4d505f;
+    /*  4e505b*/
+}
+
+.dark .chat-textarea::placeholder {
+    color: #8b8c93
+}
+
+.dark .type.btn-send:hover {
+    background-color: #575965;
+}
+
+.dark .chat-container::-webkit-scrollbar-thumb,
+.dark .chat-textarea::-webkit-scrollbar-thumb {
+    background-color: #83858c;
+    /* 95969d */
+}
+
+.dark .chat-container::-webkit-scrollbar-thumb:hover,
+.dark .chat-textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #95969d;
+}
+
+.dark .btn-resend {
+    background-color: #3e4049;
+    border: 1px solid #8b8c93;
+}
+
+
+.dark .btn-resend:hover {
+    background-color: #51535b;
+}
+
+
+
+
+.dark .icon-resend,
+.dark .resend-text {
+    color: #e1e1e3;
+}
+
+.dark .error .icon-resend {
+    color: #ff0000;
+}
+
+
+.dark .btn-resend-mobile:hover {
+    background-color: #51535b;
+}
+
+.dark .subscribe-text,
+.dark .icon-resend-mobile {
+    color: #9a9ca3;
+}
+
+.dark .btn-scroll {
+    background-color: #555969;
+    opacity: .6;
+}
+
+.dark .icon-down {
+    color: #fff;
+}

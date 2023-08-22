@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskWise &nbsp;&mdash;&nbsp; Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = '/assets/font/rubik.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = '/css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = '/css/login.queries.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename = '/assets/image/favicon-02.png') }}">
+
+</head>
+
+<body>
+    <!-- <div id="video-container">
+        <video id="video-background" src="./assets/video/login-background-abstract-03.mp4" autoplay loop muted></video>
+    </div> -->
+    <div class="login-panel">
+        <div class="panel-left">
+            <div class="logo-container">
+                <img class="logo" src="/static/assets/icon/logo-02.svg" alt="">
+                <span class="logo-text">AskWise</span>
+            </div>
+
+            <div>
+                <h1 class="start-title">Explore the World of Smart Answers.</h1>
+                <p class="start-describe">Gain access to immediate and intelligent solutions for all your questions</p>
+            </div>
+            <div class="carousel">
+                <div class="slides-box">
+                    <div class="slides">
+                        <div class="slide">
+                            <div class="quote">
+                                <img class="mark" src="/static/assets/icon/mark.svg" alt="mark">
+                                <p class="quote-text">
+                                    This Q&A robot is incredibly fast and accurate, providing clear and precise answers.
+                                    Highly recommended!
+                                </p>
+                            </div>
+                            <div class="user-box">
+                                <img class="avatar" src="/static/assets/image/customer-1.jpg" alt="user-1">
+                                <div class="user-info">
+                                    <span class="customer-name">Emily Davis</span>
+                                    <span class="customer-job">Marketing Director</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="quote">
+                                <img class="mark" src="/static/assets/icon/mark.svg" alt="mark">
+                                <p class="quote-text">
+                                    I'm impressed by the reliability of this knowledge source. It offers convenient
+                                    access to a wide range of information.
+                                </p>
+                            </div>
+                            <div class="user-box">
+                                <img class="avatar" src="/static/assets/image/customer-2.jpg" alt="user-1">
+                                <div class="user-info">
+                                    <span class="customer-name">David Thompson</span>
+                                    <span class="customer-job">Marketing Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="quote">
+                                <img class="mark" src="/static/assets/icon/mark.svg" alt="mark">
+                                <p class="quote-text">
+                                    The speed and accuracy of this robot are outstanding. It consistently delivers
+                                    thorough and helpful responses. Fantastic
+                                    service!
+                                </p>
+                            </div>
+                            <div class="user-box">
+                                <img class="avatar" src="/static/assets/image/customer-3.jpg" alt="user-1">
+                                <div class="user-info">
+                                    <span class="customer-name">Lily Anderson</span>
+                                    <span class="customer-job">Librarian</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="quote">
+                                <img class="mark" src="/static/assets/icon/mark.svg" alt="mark">
+                                <p class="quote-text">
+                                    This Q&A robot is incredibly fast and accurate, providing clear and precise answers.
+                                    Highly recommended!
+                                </p>
+                            </div>
+                            <div class="user-box">
+                                <img class="avatar" src="/static/assets/image/customer-1.jpg" alt="user-1">
+                                <div class="user-info">
+                                    <span class="customer-name">Emily Davis</span>
+                                    <span class="customer-job">Marketing Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-carousels">
+                    <button class="btn-carousel current"></button>
+                    <button class="btn-carousel"></button>
+                    <button class="btn-carousel"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-right">
+
+            <form novalidate id="signin" class="form show">
+                <div class="title">
+                    <h1 class="header">Sign in</h1>
+                    <p class="describe">Enjoy knowledge at your fingertips</p>
+                </div>
+                <div class="input-box error">
+                    <label for="email" class="label">Email</label>
+                    <input type="email" name="email" id="login-email" class="input input-keybord" autocomplete="off">
+                    <div class="error-text">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="flex justfy-between">
+                        <label for="password" class="label">Password</label>
+                        <span><a href="#" class="forgot-text">Forgot?</a></span>
+                    </div>
+                    <input type="password" name="password" id="login-password" data-validate="required,password"
+                        class="input input-keybord" autocomplete="off">
+                    <!-- current-password -->
+                    <div class="error-text">
+                    </div>
+                </div>
+                <!-- <a href="./chat.html"> -->
+                <button class="input btn-form">Log in</button>
+                <!-- </a> -->
+                <!-- <div class="signin-help"> -->
+                <p class="help-signup-text">No account?&nbsp;<a href="#" class="help-signup-text-link">Sign up</a>
+                </p>
+                <!-- <p class="help-signup-text"><a class="help-signup-text-link" href="#">Forgot?</a></p> -->
+                <!-- </div> -->
+
+            </form>
+
+            <form novalidate id="signup" class="form" autocomplete="off" action="#">
+                <div class="title">
+                    <h1 class="header">Get started</h1>
+                    <p class="describe">Create your account now</p>
+                </div>
+                <div class="input-box">
+                    <label for="username" class="label">Full name</label>
+                    <input type="text" name="username" id="full-name" data-validate="required,username"
+                        class="input input-keybord" autocomplete="off">
+                    <div class="error-text"></div>
+                </div>
+                <div class="input-box">
+                    <label for="email" class="label">Email</label>
+                    <input type="email" name="email" id="signup-email" data-validate="required,email"
+                        class="input input-keybord" autocomplete="off">
+                    <div class="error-text"></div>
+                </div>
+                <div class="input-box">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" name="password" id="signup-password" data-validate="required,password"
+                        class="input input-keybord" autocomplete="off">
+                    <div class="error-text"></div>
+                </div>
+                <button class="input btn-form">Sign up</button>
+                <p class="help-signin-text">Hava an account?&nbsp;<a href="#" class="help-signin-text-link">Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="/static/lib/js/validate.min.js"></script>
+<script type="module" src="/static/js/login.js"></script>
+
+
+</html>

@@ -1,0 +1,117 @@
+/* .alertify .ajs-header,
+.alertify .ajs-dialog,
+.alertify .ajs-footer {
+    background-color: #3e404c;
+} */
+.alertify .ajs-dimmer {
+    opacity: .85;
+}
+
+.alertify .ajs-dialog {
+    border-radius: 1rem;
+    padding: 0;
+}
+
+.alertify .ajs-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: auto;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.alertify .ajs-commands {
+    margin: 0 .4rem 0 0;
+}
+
+.alertify .ajs-commands button.ajs-close {
+    /* background-size: 1.6rem 1.6rem; */
+    margin-top: .6rem;
+    transform: scale(1.2);
+}
+
+.alertify .ajs-body {
+    min-height: 0;
+    margin: .6rem 0 .6rem 0;
+}
+
+.alertify .ajs-body .ajs-content {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.alertify .ajs-header,
+.alertify .ajs-footer,
+.alertify .ajs-body {
+    background-color: transparent;
+}
+
+.alertify .ajs-footer {
+    margin: auto;
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
+    border: none;
+    border-radius: 6px;
+    min-width: 6.8rem;
+    outline: none;
+    cursor: pointer;
+
+    transition: all .3s;
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button.ajs-ok {
+    background-color: #e60000;
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button.ajs-ok:hover {
+    background-color: #ff0000;
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button.ajs-cancel {
+    border: 1px solid #cfcfcf;
+    background-color: #fff
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button.ajs-cancel:hover {
+    background-color: #f3f3f3;
+}
+
+
+.alertify-notifier .ajs-message.ajs-success {
+    background-color: #98FF98;
+    border-radius: .8rem;
+    color: #333333;
+}
+
+.dark .alertify .ajs-dimmer {
+    background-color: rgb(52, 53, 65);
+}
+
+/* rgba(52, 53, 65, .9) */
+.dark .alertify .ajs-dialog {
+    background-color: #2a2c33;
+}
+
+.dark .alertify .ajs-header {
+    border-bottom: 1px solid #55565c;
+}
+
+.dark .alertify .ajs-body .ajs-content {
+    color: #bfc0c2;
+}
+
+.dark .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
+    color: #e6e6e6;
+}
+
+
+.dark .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button.ajs-cancel {
+    background-color: #3f4147;
+    border: 1px solid #55565c;
+}
+
+.dark .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button.ajs-cancel:hover {
+    background-color: #525459;
+}

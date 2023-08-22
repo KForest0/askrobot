@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url(../assets/font/SourceCodePro-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+
+/* Markdown转换成HTML后的样式 */
+.bot-message p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 1rem 0;
+}
+
+.bot-message p:first-child {
+    margin-top: .5rem;
+}
+
+.bot-message p:last-child {
+    /* margin-top: 1rem 0 0 0; */
+    margin-bottom: 0;
+}
+
+
+
+
+.bot-message pre {
+    padding: 0;
+    margin: 0;
+    white-space: normal;
+
+    background-color: #22272e;
+    border-radius: 6px;
+
+}
+
+.pre-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pre-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1.6rem;
+    height: 3.6rem;
+
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+
+    color: #fff;
+    border-radius: 6px 6px 0 0;
+    background-color: #181b20;
+}
+
+.code-container {
+    padding: 1.4rem;
+
+    overflow-x: scroll;
+    overflow-y: auto;
+}
+
+.bot-message pre code {
+    display: block;
+    width: 0;
+
+    white-space: pre !important;
+
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.6rem;
+    line-height: 1.3;
+
+    word-wrap: normal;
+    word-break: normal;
+    word-spacing: normal;
+    /* 给我写一个加法函数，使用Java并使用代码块的形式输出 */
+    text-align: left;
+}
+
+
+
+/* 给我输出一个列表，不要用代码块的方式输出，列表的内容是随意填充 */
+.bot-message ol li,
+.bot-message ul li {
+    margin: 1rem 0 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.bot-message ol li:first-child,
+.bot-message ul li:first-child {
+    margin-top: .6rem;
+}
+
+.bot-message ol li::marker {
+    padding-left: 1.2rem;
+}
+
+.copied code::selection,
+.copied code *::selection {
+    background-color: transparent;
+}
+
+/* 给我输出一个表格，不要用代码块的方式输出，生成一个3行3列的表格，表格内容是数字 */
+.bot-message table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.bot-message th,
+.bot-message td {
+    padding: 1.6rem 2.4rem;
+    text-align: center;
+    color: #112A46;
+    border: 1px solid #112A46;
+    font-size: 1.6rem;
+}

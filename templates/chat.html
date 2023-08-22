@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskWise &nbsp;&mdash;&nbsp; Chat</title>
+
+
+    <link rel="icon" href="{{ url_for('static', filename = '/assets/image/favicon-02.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/lib/css/github-dark-dimmed.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/lib/css/alertify.min.css') }}" />
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='/lib/css/necolas.github.io_normalize.css_8.0.1_normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/assets/font/rubik.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/general.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/queries.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/menu.css') }}">
+
+    <script src="{{ url_for('static', filename='/lib/js/anime.min.js') }}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="{{ url_for('static', filename='/lib/js/alertify.min.js') }}"></script>
+</head>
+
+<body>
+
+    <section>
+        <div class="menu-container">
+            <menu class="menu">
+                <nav>
+                    <a href="#" class="btn btn-new">
+                        <ion-icon name="add-outline" class="icon"></ion-icon>
+                        <span>
+                            New Chat
+                        </span>
+                    </a>
+                    <div class="lists-chat">
+                        <div class="lists-container"></div>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-text">Option</span>
+                        <ul>
+                            <li>
+                                <a href="#" class="btn btn-normal btn-option">
+                                    <ion-icon name="chatbox-ellipses-outline" class="icon"></ion-icon>
+                                    <span>Chat</span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="more-container">
+                                    <a href="#" id="btn-more" class="btn btn-normal btn-option">
+                                        <div class="user-group">
+                                            <div class="user-name-text">
+                                                <ion-icon class="icon" name="person-outline"></ion-icon>
+                                                <span>
+                                                    0x145x
+                                                </span>
+                                            </div>
+                                            <ion-icon class="icon" name="ellipsis-horizontal"></ion-icon>
+                                        </div>
+                                    </a>
+                                    <!-- 更多列表 -->
+                                    <ul class="more-list">
+                                        <li>
+                                            <a href="#" class="btn btn-more-list">
+                                                <ion-icon class="icon" name="information-circle-outline"></ion-icon>
+                                                <span>
+                                                    Help & FAQ
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <span class="division-line"></span>
+                                        <li>
+                                            <a href="#" id="clear-all" class="btn btn-more-list">
+                                                <ion-icon class="icon" name="trash"></ion-icon>
+                                                <span>
+                                                    Clear all conversation
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" id="switch" class="btn btn-more-list">
+                                                <ion-icon class="icon icon-theme" name="sunny"></ion-icon>
+                                                <span class="theme-text">
+                                                    Light
+                                                </span>
+                                                <label class="switch">
+                                                    <input type="checkbox" class="toggle">
+                                                    <span class="slider"></span>
+                                                </label>
+                                            </a>
+                                        </li>
+                                        <span class="division-line"></span>
+                                        <li>
+                                            <a href="#" class="btn btn-more-list">
+                                                <ion-icon class="icon" name="log-out-outline"></ion-icon>
+                                                <span>
+                                                    Log out
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </menu>
+            <button class="btn-menu-cancel">
+                <ion-icon name="close-outline" class="icon-menu-cancel"></ion-icon>
+            </button>
+        </div>
+
+        <main>
+            <div class="overlay"></div>
+            <div class="main-container">
+                <header class="header">
+                    <button class="btn-menu">
+                        <ion-icon class="icon icon-menu" name="menu-outline"></ion-icon>
+                    </button>
+                    <span class="session-title"></span>
+                    <button class="btn-create">
+                        <ion-icon class="icon icon-create" name="add-outline"></ion-icon>
+                    </button>
+                </header>
+                <div class="chat-container">
+                    <div class="space-container" id="chat-bottom"></div>
+                </div>
+
+            </div>
+            <div class="form-container sticky">
+                <button class="btn-scroll">
+                    <ion-icon name="arrow-down-outline" class="icon icon-down"></ion-icon>
+                </button>
+                <form class="form">
+                    <div class="form-box">
+                        <div class="btn-container">
+                            <button class="btn-form btn-resend">
+                                <ion-icon class="icon icon-resend" name="refresh-outline"></ion-icon>
+                                <span class="resend-text">Regenerate response</span>
+                            </button>
+                        </div>
+                        <div class="flex item-center justfy-center gap-05">
+                            <div class="form-group">
+                                <textarea rows="1" placeholder="Send a message" id="myTextarea"
+                                    class="chat-textarea"></textarea>
+                                <button class="btn-send" disabled>
+                                    <ion-icon class="icon icon-send" name="paper-plane-outline"></ion-icon>
+                                </button>
+                                <div class="dots">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                            </div>
+                            <button class="btn-resend-mobile">
+                                <ion-icon class="icon-resend-mobile" name="refresh-outline"></ion-icon>
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+                <div class="subscribe-container">
+                    <span class="subscribe-text">The universe is a figment of its own imagination, and our
+                        perceptions
+                        merely reflections of its self-contemplation.
+                    </span>
+                </div>
+            </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- <script type="module" src="./lib/js/uuid.js"></script> -->
+    <script src="{{ url_for('static', filename='/lib/js/unpkg.com_dayjs@1.8.21_dayjs.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/lib/js/typed.umd.js') }}"></script>
+    <script src="{{ url_for('static', filename='/lib/js/marked.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='/lib/js/highlight.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/lib/js/clipboard.min.js') }}"></script>
+
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

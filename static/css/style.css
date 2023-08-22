@@ -1,0 +1,252 @@
+@import url(./details.css);
+@import url(./dark.css);
+@import url(../lib/css/alertify.dark.css);
+
+/******************************/
+/* 展示部分 */
+/******************************/
+section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    overflow: hidden;
+}
+
+/* 因为.overlay是absolute定位，所以要在父元素main上设置relative */
+main {
+    position: relative;
+}
+
+.main-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/******************************/
+/* 遮罩层 */
+/******************************/
+.overlay {
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+    padding-bottom: 100vh;
+    background: linear-gradient(rgba(60, 54, 66, .75), rgba(60, 54, 66, .75));
+}
+
+/******************************/
+/* 顶部导航 */
+/******************************/
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    width: 100%;
+    height: 4.6rem;
+    padding: 0 .8rem;
+
+    color: #fff;
+    background-color: #2d3345;
+    /* 2d3345 3c3642*/
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+}
+
+.session-title {
+    display: inline-block;
+    text-align: center;
+    overflow-x: hidden;
+    width: 20rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/******************************/
+/* 对话部分 */
+/******************************/
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    overflow: auto;
+}
+
+.user-container {
+    background-color: #fff;
+    border: 2px solid transparent;
+}
+
+.bot-container {
+    border: 2px solid #f1f0f2;
+    background-color: #f7f7f8;
+}
+
+.user,
+.bot {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2.6rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.user-avatar,
+.bot-avatar {
+    display: flex;
+    align-items: center;
+    padding: .3rem;
+    border-radius: 2px;
+    align-self: flex-start;
+}
+
+.user-message {
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+.bot-message {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 72rem;
+    /* width: 100%; */
+}
+
+.space-container {
+    flex-shrink: 0;
+    height: 16.8rem;
+}
+
+/******************************/
+/* 输入部分 */
+/******************************/
+.form-container {
+    margin: 0 auto;
+    width: 100%;
+    background-color: transparent;
+}
+
+.sticky {
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.sticky::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 13rem;
+    z-index: -1;
+    background: linear-gradient(to top, #fff, #fff, transparent);
+}
+
+.form {
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    max-width: 80rem;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: .6rem;
+    box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.15);
+}
+
+.btn-resend-mobile-container {
+    padding: 1.2rem;
+}
+
+
+.chat-textarea {
+    flex: 1;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    overflow-y: scroll;
+    padding: 1rem 1rem;
+
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    /* 指定初始高度 */
+    max-height: 19rem;
+    /* height: 3.6rem; */
+    /* line-height: 1.2; */
+    vertical-align: middle;
+
+    resize: none;
+}
+
+.chat-textarea:disabled {
+    background-color: #fff;
+}
+
+.chat-textarea::placeholder {
+    font-weight: 400;
+    color: #c5c3c6;
+}
+
+.subscribe-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1.2rem 1.2rem 2rem 1.2rem;
+}
+
+.subscribe-text {
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+    font-size: 1.4rem;
+    color: #635e68;
+}
+
+.resend-text,
+.stoping-text {
+    color: #635e68;
+    font-size: 1.4rem;
+}
+
+.error .resend-text {
+    color: #ff0000;
+}
+
+
+
+
+
+/* .warning-text {40414F
+    color: #FFEBEB;
+    font-size: 1.4rem;
+} */
+
+/* .warning .btn-resend {
+    display: none;
+} */
+
+/* .warning .error {
+    display: flex;
+} */

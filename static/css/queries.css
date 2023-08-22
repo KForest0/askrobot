@@ -1,0 +1,149 @@
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75em) {
+
+    .user,
+    .bot {
+        padding: 2.6rem 1.2rem;
+    }
+
+    .form {
+        max-width: 80rem;
+    }
+
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media(max-width:59em) {
+    .subscribe-container {
+        padding: .8rem 1.2rem 1.6rem 1.2rem;
+    }
+}
+
+/**************************/
+/* BELOW 768px (Tablets) */
+/**************************/
+@media(max-width:48em) {
+
+
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    .user,
+    .bot {
+        max-width: 70rem;
+        padding: 2.6rem 1.2rem;
+    }
+
+    .bot-message {
+        max-width: 62rem;
+    }
+
+    /* Mobile状态下的菜单容器 */
+    .menu-container {
+        position: absolute;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: 10;
+        transition: all .3s ease-in-out;
+
+        pointer-events: none;
+    }
+
+    .menu-container.show-menu {
+        transform: translateX(0);
+        pointer-events: auto;
+    }
+
+    .menu {
+        min-width: 26rem;
+    }
+
+
+    /* 当show-menu出现时,遮罩层用block显现 */
+    .overlay.show-menu {
+        /* display: block; */
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+    /* 当show-menu出现时,关闭菜单按钮用flex显现 */
+    .btn-menu-cancel.show-menu {
+        display: flex;
+    }
+
+    /* 在Mobile状态下,顶部header的出现 */
+    .main-container .header {
+        transform: translateY(0);
+    }
+
+    .chat-container {
+        padding-top: 4.6rem;
+    }
+
+    .form-container {
+        background-color: #fff;
+        border-top: 1px solid #d9d8da;
+    }
+
+    .dark .form-container {
+        background-color: #424758;
+        border-top: 1px solid #5f626f;
+    }
+
+    .form {
+        max-width: 74rem;
+        padding: 0 .8rem 0 1.6rem;
+    }
+
+    #myTextarea {
+        height: 3rem;
+        max-height: 15rem;
+        padding: .6rem .6rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    .subscribe-text {
+        font-size: 1.2rem;
+    }
+
+    .sticky::after {
+        display: none;
+        /* height: 8rem;
+        background-color: #fff;
+        border-top: 1px solid #d9d8da; */
+    }
+
+    .btn-resend.show,
+    .btn-resend.hidden {
+        display: none;
+    }
+
+    .btn-resend-mobile.show {
+        display: flex;
+    }
+
+    .btn-scroll {
+        transform: translate(-100%, -150%);
+    }
+
+
+}
+
+/**************************/
+/* BELOW 624px (Tablets) */
+/**************************/
+
+@media (max-width:39em) {
+    /* .sticky::after {
+        height: 9rem;
+    } */
+}
